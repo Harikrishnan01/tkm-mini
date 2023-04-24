@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "461317471469",
+    "project_id": "examseatingarrangement-5ea4d",
+    "storage_bucket": "examseatingarrangement-5ea4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461317471469:android:a616ca268fda498d3ba0e4",
+        "android_client_info": {
+          "package_name": "com.example.submini"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461317471469-ad64saario07oh3adl3f12d89pibm7e0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfCNtn0XIGEEDiM0DwGtN7SWypvv-wMOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461317471469-ad64saario07oh3adl3f12d89pibm7e0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
