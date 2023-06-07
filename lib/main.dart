@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:submini/screens/admin_login.dart';
 import 'package:submini/screens/class_details.dart';
 import 'package:submini/screens/classroom_details.dart';
+import 'package:submini/screens/main_page.dart';
+import 'package:submini/screens/screen_output.dart';
 
 import 'package:submini/screens/subject_details.dart';
 import 'package:submini/screens/timetable.dart';
@@ -24,7 +26,7 @@ class hari extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: ClassDetails(),
+      home: AdminLogin(),
     );
   }
 }

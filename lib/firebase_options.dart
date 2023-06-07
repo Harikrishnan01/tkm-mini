@@ -44,39 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAtB1p8DNXnTC0ZoqlqXHBS0inxUPS5BYk',
-    appId: '1:461317471469:web:f682120fac9aaa703ba0e4',
-    messagingSenderId: '461317471469',
-    projectId: 'examseatingarrangement-5ea4d',
-    authDomain: 'examseatingarrangement-5ea4d.firebaseapp.com',
-    storageBucket: 'examseatingarrangement-5ea4d.appspot.com',
+    apiKey: 'AIzaSyDRcG4mCgDwjvGKdzyFdGy3X5muwEPmeM4',
+    appId: '1:465155784135:web:39b92b47e93301b2b9ede2',
+    messagingSenderId: '465155784135',
+    projectId: 'tkm-mini-proj',
+    authDomain: 'tkm-mini-proj.firebaseapp.com',
+    storageBucket: 'tkm-mini-proj.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAfCNtn0XIGEEDiM0DwGtN7SWypvv-wMOI',
-    appId: '1:461317471469:android:a616ca268fda498d3ba0e4',
-    messagingSenderId: '461317471469',
-    projectId: 'examseatingarrangement-5ea4d',
-    storageBucket: 'examseatingarrangement-5ea4d.appspot.com',
+    apiKey: 'AIzaSyBpE4m-iwU3t_gCJ5Ag9d8tmva6SU-XP94',
+    appId: '1:465155784135:android:0fd71243761e3f05b9ede2',
+    messagingSenderId: '465155784135',
+    projectId: 'tkm-mini-proj',
+    storageBucket: 'tkm-mini-proj.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCTNOxJgLHiQ9xVrCHZ3gS9yGm-7-8tiqI',
-    appId: '1:461317471469:ios:82e5819a4f8be5973ba0e4',
-    messagingSenderId: '461317471469',
-    projectId: 'examseatingarrangement-5ea4d',
-    storageBucket: 'examseatingarrangement-5ea4d.appspot.com',
-    iosClientId: '461317471469-rgvef8tm67ih1ni188pkhjcpuptln0pc.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBWj0E8__-ozZRNK_QZU3bpXuBlkhugyyM',
+    appId: '1:465155784135:ios:910fca621757fe8bb9ede2',
+    messagingSenderId: '465155784135',
+    projectId: 'tkm-mini-proj',
+    storageBucket: 'tkm-mini-proj.appspot.com',
+    iosClientId: '465155784135-78g2t9leacd2r79usc48t93i63pektv4.apps.googleusercontent.com',
     iosBundleId: 'com.example.submini',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCTNOxJgLHiQ9xVrCHZ3gS9yGm-7-8tiqI',
-    appId: '1:461317471469:ios:82e5819a4f8be5973ba0e4',
-    messagingSenderId: '461317471469',
-    projectId: 'examseatingarrangement-5ea4d',
-    storageBucket: 'examseatingarrangement-5ea4d.appspot.com',
-    iosClientId: '461317471469-rgvef8tm67ih1ni188pkhjcpuptln0pc.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBWj0E8__-ozZRNK_QZU3bpXuBlkhugyyM',
+    appId: '1:465155784135:ios:910fca621757fe8bb9ede2',
+    messagingSenderId: '465155784135',
+    projectId: 'tkm-mini-proj',
+    storageBucket: 'tkm-mini-proj.appspot.com',
+    iosClientId: '465155784135-78g2t9leacd2r79usc48t93i63pektv4.apps.googleusercontent.com',
     iosBundleId: 'com.example.submini',
   );
 }

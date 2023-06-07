@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "461317471469",
-    "project_id": "examseatingarrangement-5ea4d",
-    "storage_bucket": "examseatingarrangement-5ea4d.appspot.com"
+    "project_number": "465155784135",
+    "project_id": "tkm-mini-proj",
+    "storage_bucket": "tkm-mini-proj.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:461317471469:android:a616ca268fda498d3ba0e4",
+        "mobilesdk_app_id": "1:465155784135:android:0fd71243761e3f05b9ede2",
         "android_client_info": {
           "package_name": "com.example.submini"
         }
       },
       "oauth_client": [
         {
-          "client_id": "461317471469-ad64saario07oh3adl3f12d89pibm7e0.apps.googleusercontent.com",
+          "client_id": "465155784135-catqfvfd56pejcndvb4e5hohvdggfqf3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAfCNtn0XIGEEDiM0DwGtN7SWypvv-wMOI"
+          "current_key": "AIzaSyBpE4m-iwU3t_gCJ5Ag9d8tmva6SU-XP94"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "461317471469-ad64saario07oh3adl3f12d89pibm7e0.apps.googleusercontent.com",
+              "client_id": "465155784135-catqfvfd56pejcndvb4e5hohvdggfqf3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

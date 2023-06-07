@@ -47,339 +47,347 @@ class _ClassRoomState extends State<ClassRoom> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xff242C3B),
-        appBar: PreferredSize(
-          child: AppBarSubjectDetails(
-            title: "Class Room",
-          ),
-          preferredSize: Size.fromHeight(40),
-        ),
-        body: ListView(
-          children: [
-            Column(
-              children: [
-                SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  width: 350,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 102, 100, 100),
-                        Color(0x363E51)
-                      ],
-                    ),
-                  ),
-                  child: TextField(
-                    controller: roomnumcontroller,
-                    decoration: InputDecoration(
-                        enabledBorder: InputBorder.none,
-                        contentPadding: EdgeInsets.all(12),
-                        hintText: 'Enter Room Number',
-                        hintStyle: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white)),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                    width: 350,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 102, 100, 100),
-                          Color(0x363E51)
-                        ],
+        body: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://t4.ftcdn.net/jpg/03/73/26/09/360_F_373260949_C49GBDmBKwzfg33ym1wMHRYK7g2cFAHI.jpg"),
+                    fit: BoxFit.cover)),
+            child: Row(children: [
+              Container(
+                width: 600,
+                height: double.infinity,
+                child: ListView(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50),
+                    child: Column(children: [
+                      SizedBox(
+                        height: 150,
                       ),
-                    ),
-                    child: TextField(
-                      controller: blockcontroller,
-                      decoration: InputDecoration(
-                          enabledBorder: InputBorder.none,
-                          contentPadding: EdgeInsets.all(12),
-                          hintText: 'Enter block',
-                          hintStyle: GoogleFonts.poppins(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white)),
-                    )),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 350,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 102, 100, 100),
-                        Color(0x363E51)
-                      ],
-                    ),
-                  ),
-                  child: TextField(
-                    controller: norowscontroller,
-                    decoration: InputDecoration(
-                        enabledBorder: InputBorder.none,
-                        contentPadding: EdgeInsets.all(12),
-                        hintText: 'Enter number of rows',
-                        hintStyle: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white)),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 350,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 102, 100, 100),
-                        Color(0x363E51)
-                      ],
-                    ),
-                  ),
-                  child: TextField(
-                    controller: nocolscontroller,
-                    decoration: InputDecoration(
-                        enabledBorder: InputBorder.none,
-                        contentPadding: EdgeInsets.all(12),
-                        hintText: 'Enter no of Columns',
-                        hintStyle: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white)),
-                  ),
-                ),
-                SizedBox(
-                  height: 50,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            String roomnum = roomnumcontroller.text.trim();
-                            String _block = blockcontroller.text.trim();
-                            String no_rows = norowscontroller.text.trim();
-                            String no_cols = nocolscontroller.text.trim();
-                            insert();
-                            setState(() {
-                              if (roomnum.isNotEmpty &&
-                                  _block.isNotEmpty &&
-                                  no_rows.isNotEmpty &&
-                                  no_cols.isNotEmpty) {
-                                roomnumcontroller.text = '';
-                                blockcontroller.text = '';
-                                norowscontroller.text = '';
-                                nocolscontroller.text = '';
+                      Text(
+                        'CLASS DETAILS',
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 32,
+                            color: Colors.black),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 90, right: 90, top: 40),
+                        child: TextField(
+                          controller: roomnumcontroller,
+                          decoration: InputDecoration(
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.black)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.grey)),
+                              hintText: 'Enter Room Number',
+                              hintStyle: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 90, right: 90, top: 20),
+                        child: TextField(
+                          controller: blockcontroller,
+                          decoration: InputDecoration(
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.black)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.grey)),
+                              hintText: 'Enter Block ',
+                              hintStyle: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 90, right: 90, top: 20),
+                        child: TextField(
+                          controller: norowscontroller,
+                          decoration: InputDecoration(
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.black)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.grey)),
+                              hintText: 'Enter no of rows ',
+                              hintStyle: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 90, right: 90, top: 20),
+                        child: TextField(
+                          controller: nocolscontroller,
+                          decoration: InputDecoration(
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.black)),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(7),
+                                  borderSide: BorderSide(color: Colors.grey)),
+                              hintText: 'Enter no of columns ',
+                              hintStyle: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Column(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    String roomnum =
+                                        roomnumcontroller.text.trim();
+                                    String _block = blockcontroller.text.trim();
+                                    String no_rows =
+                                        norowscontroller.text.trim();
+                                    String no_cols =
+                                        nocolscontroller.text.trim();
+                                    insert();
+                                    setState(() {
+                                      if (roomnum.isNotEmpty &&
+                                          _block.isNotEmpty &&
+                                          no_rows.isNotEmpty &&
+                                          no_cols.isNotEmpty) {
+                                        roomnumcontroller.text = '';
+                                        blockcontroller.text = '';
+                                        norowscontroller.text = '';
+                                        nocolscontroller.text = '';
 
-                                class_room.add(classroom(
-                                    roomnum: roomnum,
-                                    block: _block,
-                                    norows: no_rows,
-                                    nocols: no_cols));
-                              }
-                            });
-                          },
-                          child: Container(
-                            width: 90,
-                            height: 85,
-                            //color: Colors.grey,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                gradient: LinearGradient(
-                                    colors: [Colors.grey, Color(0x363E51)])),
-                            child: Center(
-                                child: Text(
-                              'Save',
-                              style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 20,
-                                  color: Colors.white),
-                            )),
-                          ),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            String roomnum = roomnumcontroller.text.trim();
-                            String _block = blockcontroller.text.trim();
-                            String no_rows = norowscontroller.text.trim();
-                            String no_cols = nocolscontroller.text.trim();
-                            //insert();
-                            setState(() {
-                              if (roomnum.isNotEmpty &&
-                                  _block.isNotEmpty &&
-                                  no_rows.isNotEmpty &&
-                                  no_cols.isNotEmpty) {
-                                nocolscontroller.text = '';
-                                roomnumcontroller.text = '';
-                                norowscontroller.text = '';
-                                blockcontroller.text = '';
-                                class_room.add(classroom(
-                                    roomnum: roomnum,
-                                    block: _block,
-                                    norows: no_rows,
-                                    nocols: no_cols));
-                              }
-                            });
-                          },
-                          child: Container(
-                            width: 90,
-                            height: 85,
-                            //color: Colors.grey,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                gradient: LinearGradient(
-                                    colors: [Colors.grey, Color(0x363E51)])),
-                            child: Center(
-                                child: Text(
-                              'Edit',
-                              style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 20,
-                                  color: Colors.white),
-                            )),
-                          ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                SizedBox(
-                  height: 900,
-                  child: ListView.builder(
-                      itemCount: class_room.length,
-                      itemBuilder: (BuildContext ctx, int index) {
-                        return ListTile(
-                          // tileColor: Colors.orange,
-                          title: Container(
-                            width: 200,
-                            height: 130,
-                            //color: Colors.white,
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                    colors: [Colors.grey, Color(0x363E51)]),
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(68)),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 40, top: 15),
-                              child: Column(
-                                children: [
-                                  Row(
+                                        class_room.add(classroom(
+                                            roomnum: roomnum,
+                                            block: _block,
+                                            norows: no_rows,
+                                            nocols: no_cols));
+                                      }
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 130,
+                                    height: 85,
+                                    //color: Colors.grey,
+                                    decoration: BoxDecoration(
+                                      color: Colors.green[100],
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Center(
+                                        child: Text(
+                                      'Save',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 20,
+                                          color: Colors.black),
+                                    )),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    String roomnum =
+                                        roomnumcontroller.text.trim();
+                                    String _block = blockcontroller.text.trim();
+                                    String no_rows =
+                                        norowscontroller.text.trim();
+                                    String no_cols =
+                                        nocolscontroller.text.trim();
+                                    //insert();
+                                    setState(() {
+                                      if (roomnum.isNotEmpty &&
+                                          _block.isNotEmpty &&
+                                          no_rows.isNotEmpty &&
+                                          no_cols.isNotEmpty) {
+                                        nocolscontroller.text = '';
+                                        roomnumcontroller.text = '';
+                                        norowscontroller.text = '';
+                                        blockcontroller.text = '';
+                                        class_room.add(classroom(
+                                            roomnum: roomnum,
+                                            block: _block,
+                                            norows: no_rows,
+                                            nocols: no_cols));
+                                      }
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 130,
+                                    height: 85,
+                                    //color: Colors.grey,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Colors.green[100],
+                                    ),
+                                    child: Center(
+                                        child: Text(
+                                      'Edit',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 20,
+                                          color: Colors.black),
+                                    )),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ]),
+                  ),
+                ]),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 200),
+                child: Container(
+                  width: 500,
+                  //color: Colors.grey,
+                  child: Column(children: [
+                    SizedBox(
+                      height: 700,
+                      child: ListView.builder(
+                          itemCount: class_room.length,
+                          itemBuilder: (BuildContext ctx, int index) {
+                            return ListTile(
+                              // tileColor: Colors.orange,
+                              title: Container(
+                                width: 200,
+                                height: 130,
+                                //color: Colors.white,
+                                decoration: BoxDecoration(
+                                    gradient: LinearGradient(colors: [
+                                      Colors.green.shade100,
+                                      Color(0x363E51)
+                                    ]),
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(68)),
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 40, top: 15),
+                                  child: Column(
                                     children: [
-                                      Column(
+                                      Row(
                                         children: [
-                                          Text(
-                                            'Room Number:' +
-                                                ' ' +
-                                                class_room[index].roomnum,
-                                            style: GoogleFonts.poppins(
-                                                // fontWeight: FontWeight.w700,
-                                                color: Colors.white),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                'Room Number:' +
+                                                    ' ' +
+                                                    class_room[index].roomnum,
+                                                style: GoogleFonts.poppins(
+                                                    // fontWeight: FontWeight.w700,
+                                                    color: Colors.white),
+                                              ),
+                                              Text(
+                                                'Block:' +
+                                                    ' ' +
+                                                    class_room[index].block,
+                                                style: GoogleFonts.poppins(
+                                                    // fontWeight: FontWeight.w700,
+                                                    color: Colors.white),
+                                              ),
+                                              Text(
+                                                'Number of Rows:' +
+                                                    ' ' +
+                                                    class_room[index].norows,
+                                                style: GoogleFonts.poppins(
+                                                    // fontWeight: FontWeight.w700,
+                                                    color: Colors.white),
+                                              ),
+                                              Text(
+                                                'Number of Columns: ' +
+                                                    ' ' +
+                                                    class_room[index].nocols,
+                                                style: GoogleFonts.poppins(
+                                                    // fontWeight: FontWeight.w700,
+                                                    color: Colors.white),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            'Block:' +
-                                                ' ' +
-                                                class_room[index].block,
-                                            style: GoogleFonts.poppins(
-                                                // fontWeight: FontWeight.w700,
-                                                color: Colors.white),
+                                          Spacer(),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 10),
+                                            child: Column(
+                                              children: [
+                                                InkWell(
+                                                  onTap: () {
+                                                    setState(() {
+                                                      nocolscontroller.text =
+                                                          class_room[index]
+                                                              .nocols;
+                                                      blockcontroller.text =
+                                                          class_room[index]
+                                                              .block;
+                                                      norowscontroller.text =
+                                                          class_room[index]
+                                                              .norows;
+                                                      roomnumcontroller.text =
+                                                          class_room[index]
+                                                              .roomnum;
+                                                    });
+                                                  },
+                                                  child: Icon(
+                                                    Icons.edit,
+                                                    color: Colors.grey,
+                                                  ),
+                                                )
+                                              ],
+                                            ),
                                           ),
-                                          Text(
-                                            'Number of Rows:' +
-                                                ' ' +
-                                                class_room[index].norows,
-                                            style: GoogleFonts.poppins(
-                                                // fontWeight: FontWeight.w700,
-                                                color: Colors.white),
-                                          ),
-                                          Text(
-                                            'Number of Columns: ' +
-                                                ' ' +
-                                                class_room[index].nocols,
-                                            style: GoogleFonts.poppins(
-                                                // fontWeight: FontWeight.w700,
-                                                color: Colors.white),
-                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 30),
+                                            child: Column(
+                                              children: [
+                                                InkWell(
+                                                  onTap: () {
+                                                    setState(() {
+                                                      class_room
+                                                          .removeAt(index);
+                                                    });
+                                                  },
+                                                  child: Icon(
+                                                    Icons.delete,
+                                                    color: Colors.grey,
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          )
                                         ],
-                                      ),
-                                      Spacer(),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 10),
-                                        child: Column(
-                                          children: [
-                                            InkWell(
-                                              onTap: () {
-                                                setState(() {
-                                                  nocolscontroller.text =
-                                                      class_room[index].nocols;
-                                                  blockcontroller.text =
-                                                      class_room[index].block;
-                                                  norowscontroller.text =
-                                                      class_room[index].norows;
-                                                  roomnumcontroller.text =
-                                                      class_room[index].roomnum;
-                                                });
-                                              },
-                                              child: Icon(
-                                                Icons.edit,
-                                                color: Colors.grey,
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 30),
-                                        child: Column(
-                                          children: [
-                                            InkWell(
-                                              onTap: () {
-                                                setState(() {
-                                                  class_room.removeAt(index);
-                                                });
-                                              },
-                                              child: Icon(
-                                                Icons.delete,
-                                                color: Colors.grey,
-                                              ),
-                                            )
-                                          ],
-                                        ),
                                       )
                                     ],
-                                  )
-                                ],
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                        );
-                      }),
-                )
-              ],
-            )
-          ],
-        ));
+                            );
+                          }),
+                    ),
+                  ]),
+                ),
+              )
+            ])));
   }
 }
