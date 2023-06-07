@@ -45,13 +45,14 @@ class MyScreen extends StatelessWidget {
       items.add(
         Container(
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 2, 76, 135),
+            color: Colors.white,
+            border: Border.all(color: Colors.black),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Center(
             child: Text(
               '${list1[i]}',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
           ),
         ),
@@ -61,13 +62,14 @@ class MyScreen extends StatelessWidget {
         items.add(
           Container(
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 26, 2, 93),
+              color: Colors.white,
+              border: Border.all(color: Colors.black),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Center(
               child: Text(
                 '${list2[i]}',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
             ),
           ),
@@ -76,13 +78,13 @@ class MyScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: GridView.count(
           crossAxisCount: 9,
           mainAxisSpacing: 20,
-          childAspectRatio: 1,
+          childAspectRatio: 3,
           crossAxisSpacing: 10,
           children: items,
         ),

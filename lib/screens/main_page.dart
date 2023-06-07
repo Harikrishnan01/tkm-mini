@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:submini/list/list_timetable.dart';
 import 'package:submini/screens/class_details.dart';
 import 'package:submini/screens/classroom_details.dart';
+import 'package:submini/screens/screen_output.dart';
 import 'package:submini/screens/subject_details.dart';
 import 'package:submini/screens/timetable.dart';
 
@@ -167,9 +168,29 @@ class ScreenHomePage extends StatelessWidget {
                     )
                   ],
                 ),
-                Container(
-                  width: 150,
-                  height: 70,
+                Padding(
+                  padding: const EdgeInsets.only(left: 50, top: 130),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (ctx) => ScreenOutputPage()));
+                    },
+                    child: Container(
+                      width: 150,
+                      height: 70,
+                      decoration: BoxDecoration(
+                          color: Colors.green.shade100,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                          child: Text(
+                        'Generate Seating',
+                        style: GoogleFonts.poppins(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black),
+                      )),
+                    ),
+                  ),
                 )
               ],
             ),

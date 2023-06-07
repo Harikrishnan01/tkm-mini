@@ -72,10 +72,10 @@ class _AdminLoginState extends State<AdminLogin> {
                   Padding(
                     padding: const EdgeInsets.only(left: 140),
                     child: Text(
-                      'ADMIN',
+                      'Sign in',
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w700,
-                          fontSize: 32,
+                          fontSize: 42,
                           color: Colors.black),
                     ),
                   ),
@@ -120,7 +120,7 @@ class _AdminLoginState extends State<AdminLogin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 250, top: 10),
+                    padding: const EdgeInsets.only(left: 300, top: 10),
                     child: Text(
                       'Forgot Password?',
                       style: GoogleFonts.poppins(

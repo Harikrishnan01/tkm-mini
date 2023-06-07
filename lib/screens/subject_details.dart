@@ -204,88 +204,99 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                       itemBuilder: (BuildContext ctx, int index) {
                         return ListTile(
                           // tileColor: Colors.orange,
-                          title: Container(
-                            width: 200,
-                            height: 100,
-                            //color: Colors.white,
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(colors: [
-                                  Colors.green.shade100,
-                                  Color(0x363E51)
-                                ]),
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(68)),
-                            child: Column(
-                              //crossAxisAlignment:
-                              //CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Text(
-                                          'Class name: ' +
-                                              ' ' +
-                                              subject_list[index].Class_name,
-                                          style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w700,
-                                              color: Colors.white),
-                                        ),
-                                        Text(
-                                          'Subject: ' +
-                                              ' ' +
-                                              subject_list[index].Subject_name,
-                                          style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w700,
-                                              color: Colors.white),
-                                        ),
-                                      ],
-                                    ),
-                                    Spacer(),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 10),
-                                      child: Column(
-                                        children: [
-                                          InkWell(
-                                            onTap: () {
-                                              setState(() {
-                                                classnameController.text =
-                                                    subject_list[index]
-                                                        .Class_name;
-                                                subjectController.text =
-                                                    subject_list[index]
-                                                        .Subject_name;
-                                              });
-                                            },
-                                            child: Icon(
-                                              Icons.edit,
-                                              color: Colors.grey,
+                          title: Padding(
+                            padding: const EdgeInsets.only(left: 200),
+                            child: Container(
+                              width: 200,
+                              height: 100,
+                              //color: Colors.white,
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [
+                                    Colors.green.shade100,
+                                    Color(0x363E51)
+                                  ]),
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(68)),
+                              child: Column(
+                                //crossAxisAlignment:
+                                //CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 50, top: 15),
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              'Class name: ' +
+                                                  ' ' +
+                                                  subject_list[index]
+                                                      .Class_name,
+                                              style: GoogleFonts.poppins(
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.white),
                                             ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 30),
-                                      child: Column(
-                                        children: [
-                                          InkWell(
-                                            onTap: () {
-                                              setState(() {
-                                                subject_list.removeAt(index);
-                                              });
-                                            },
-                                            child: Icon(
-                                              Icons.delete,
-                                              color: Colors.grey,
+                                            Text(
+                                              'Subject: ' +
+                                                  ' ' +
+                                                  subject_list[index]
+                                                      .Subject_name,
+                                              style: GoogleFonts.poppins(
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.white),
                                             ),
-                                          )
-                                        ],
+                                          ],
+                                        ),
                                       ),
-                                    )
-                                  ],
-                                )
-                              ],
+                                      Spacer(),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 10),
+                                        child: Column(
+                                          children: [
+                                            InkWell(
+                                              onTap: () {
+                                                setState(() {
+                                                  classnameController.text =
+                                                      subject_list[index]
+                                                          .Class_name;
+                                                  subjectController.text =
+                                                      subject_list[index]
+                                                          .Subject_name;
+                                                });
+                                              },
+                                              child: Icon(
+                                                Icons.edit,
+                                                color: Colors.grey,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 30),
+                                        child: Column(
+                                          children: [
+                                            InkWell(
+                                              onTap: () {
+                                                setState(() {
+                                                  subject_list.removeAt(index);
+                                                });
+                                              },
+                                              child: Icon(
+                                                Icons.delete,
+                                                color: Colors.grey,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         );
