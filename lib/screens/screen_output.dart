@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+List<Map> Roll_List = [];
+void fetchAllRollNumber() async {
+  final result =
+      await FirebaseFirestore.instance.collection('classdetails').get();
+  result.docs.forEach((e) => Roll_List.add(e.data()));
+}
 
 class ScreenOutputPage extends StatelessWidget {
   final List<String> list1 = [
@@ -10,6 +18,8 @@ class ScreenOutputPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    fetchAllRollNumber();
+    print('hello');
     List<String> list3 = [
       for (int i = 24; i <= 45; i++) 'B20CSA$i',
     ];

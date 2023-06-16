@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "465155784135",
-    "project_id": "tkm-mini-proj",
-    "storage_bucket": "tkm-mini-proj.appspot.com"
+    "project_number": "1033252063252",
+    "project_id": "pro1-1f747",
+    "storage_bucket": "pro1-1f747.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:465155784135:android:0fd71243761e3f05b9ede2",
+        "mobilesdk_app_id": "1:1033252063252:android:0c8741714b1a3fd324ff01",
         "android_client_info": {
           "package_name": "com.example.submini"
         }
       },
       "oauth_client": [
         {
-          "client_id": "465155784135-catqfvfd56pejcndvb4e5hohvdggfqf3.apps.googleusercontent.com",
+          "client_id": "1033252063252-lqltes2jrhts1kri71r1bq50gn54k2ct.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBpE4m-iwU3t_gCJ5Ag9d8tmva6SU-XP94"
+          "current_key": "AIzaSyDktUFjnQgnXQOgyGD7zBZ8t3bw5LuiGZQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "465155784135-catqfvfd56pejcndvb4e5hohvdggfqf3.apps.googleusercontent.com",
+              "client_id": "1033252063252-lqltes2jrhts1kri71r1bq50gn54k2ct.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

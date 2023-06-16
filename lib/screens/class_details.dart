@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:submini/functions/db_functions.dart';
 import 'package:submini/list/list_class.dart';
 import 'package:submini/list/list_subject.dart';
 import 'package:submini/widget/app_bar_widget.dart';
@@ -22,9 +23,9 @@ class _ClassDetailsState extends State<ClassDetails> {
   List<classList> class_list = List.empty(growable: true);
 
   Future addsubjectdetails(String class_name, String roll_no) async {
-    await FirebaseFirestore.instance.collection('Class').add({
-      'Class name': class_name,
-      'Roll Number': roll_no,
+    await FirebaseFirestore.instance.collection('classdetails').add({
+      'classname': class_name,
+      'rollno': roll_no,
     });
   }
 
@@ -134,6 +135,7 @@ class _ClassDetailsState extends State<ClassDetails> {
                               children: [
                                 InkWell(
                                   onTap: () {
+                                    //getStudent();
                                     String clname =
                                         classnameController.text.trim();
                                     String roll =

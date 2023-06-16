@@ -23,25 +23,25 @@ class _TimeTableState extends State<TimeTable> {
 
   final classnamecontroller = TextEditingController();
 
-  Future addtimetabledetails(String _classname, String _session,
-      String _subject, String _examdate) async {
-    await FirebaseFirestore.instance.collection('timetable').add({
-      'Class-Name': _classname,
-      'Session': _session,
-      'Subject': _subject,
-      'Exam-Date': _examdate,
-    });
-  }
+  // Future addtimetabledetails(String _classname, String _session,
+  //     String _subject, String _examdate) async {
+  //   await FirebaseFirestore.instance.collection('timetable').add({
+  //     'Class-Name': _classname,
+  //     'Session': _session,
+  //     'Subject': _subject,
+  //     'Exam-Date': _examdate,
+  //   });
+  // }
 
   @override
-  Future insert() async {
-    await addtimetabledetails(
-      classnamecontroller.text.trim(),
-      sessioncontroller.text.trim(),
-      subjectcontroller.text.trim(),
-      examdatecontroller.text.trim(),
-    );
-  }
+  // Future insert() async {
+  //   await addtimetabledetails(
+  //     classnamecontroller.text.trim(),
+  //     sessioncontroller.text.trim(),
+  //     subjectcontroller.text.trim(),
+  //     examdatecontroller.text.trim(),
+  //   );
+  // }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,7 +162,7 @@ class _TimeTableState extends State<TimeTable> {
                                       examdatecontroller.text.trim();
                                   String sub = subjectcontroller.text.trim();
                                   String sess = sessioncontroller.text.trim();
-                                  insert();
+                                  //insert();
                                   setState(() {
                                     if (clname.isNotEmpty &&
                                         exdate.isNotEmpty &&

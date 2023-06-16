@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submini/functions/db_functions.dart';
 import 'package:submini/screens/admin_login.dart';
 import 'package:submini/screens/class_details.dart';
 import 'package:submini/screens/classroom_details.dart';
@@ -12,6 +13,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await initOpenDatabase();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

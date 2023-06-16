@@ -44,39 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDRcG4mCgDwjvGKdzyFdGy3X5muwEPmeM4',
-    appId: '1:465155784135:web:39b92b47e93301b2b9ede2',
-    messagingSenderId: '465155784135',
-    projectId: 'tkm-mini-proj',
-    authDomain: 'tkm-mini-proj.firebaseapp.com',
-    storageBucket: 'tkm-mini-proj.appspot.com',
+    apiKey: 'AIzaSyAu-fo2L3VBGLX9ZOvjx3l9jOk2j4ME9jY',
+    appId: '1:1033252063252:web:27651b00ad199fa424ff01',
+    messagingSenderId: '1033252063252',
+    projectId: 'pro1-1f747',
+    authDomain: 'pro1-1f747.firebaseapp.com',
+    storageBucket: 'pro1-1f747.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBpE4m-iwU3t_gCJ5Ag9d8tmva6SU-XP94',
-    appId: '1:465155784135:android:0fd71243761e3f05b9ede2',
-    messagingSenderId: '465155784135',
-    projectId: 'tkm-mini-proj',
-    storageBucket: 'tkm-mini-proj.appspot.com',
+    apiKey: 'AIzaSyDktUFjnQgnXQOgyGD7zBZ8t3bw5LuiGZQ',
+    appId: '1:1033252063252:android:0c8741714b1a3fd324ff01',
+    messagingSenderId: '1033252063252',
+    projectId: 'pro1-1f747',
+    storageBucket: 'pro1-1f747.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBWj0E8__-ozZRNK_QZU3bpXuBlkhugyyM',
-    appId: '1:465155784135:ios:910fca621757fe8bb9ede2',
-    messagingSenderId: '465155784135',
-    projectId: 'tkm-mini-proj',
-    storageBucket: 'tkm-mini-proj.appspot.com',
-    iosClientId: '465155784135-78g2t9leacd2r79usc48t93i63pektv4.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDBijvBU7LmcuVz1frlJ1SpdkkRU956c1s',
+    appId: '1:1033252063252:ios:d3e9564823daa05824ff01',
+    messagingSenderId: '1033252063252',
+    projectId: 'pro1-1f747',
+    storageBucket: 'pro1-1f747.appspot.com',
+    iosClientId: '1033252063252-7r6vkatlqkom6lgovmcufqb8a56m2m3b.apps.googleusercontent.com',
     iosBundleId: 'com.example.submini',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBWj0E8__-ozZRNK_QZU3bpXuBlkhugyyM',
-    appId: '1:465155784135:ios:910fca621757fe8bb9ede2',
-    messagingSenderId: '465155784135',
-    projectId: 'tkm-mini-proj',
-    storageBucket: 'tkm-mini-proj.appspot.com',
-    iosClientId: '465155784135-78g2t9leacd2r79usc48t93i63pektv4.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDBijvBU7LmcuVz1frlJ1SpdkkRU956c1s',
+    appId: '1:1033252063252:ios:d3e9564823daa05824ff01',
+    messagingSenderId: '1033252063252',
+    projectId: 'pro1-1f747',
+    storageBucket: 'pro1-1f747.appspot.com',
+    iosClientId: '1033252063252-7r6vkatlqkom6lgovmcufqb8a56m2m3b.apps.googleusercontent.com',
     iosBundleId: 'com.example.submini',
   );
 }

@@ -21,9 +21,9 @@ class _SubjectDetailsState extends State<SubjectDetails> {
   List<subjectList> subject_list = List.empty(growable: true);
 
   Future addsubjectdetails(String class_name, String subject) async {
-    await FirebaseFirestore.instance.collection('Subject').add({
-      'Class name': class_name,
-      'Subject': subject,
+    await FirebaseFirestore.instance.collection('users').add({
+      'classname': class_name,
+      'subject': subject,
     });
   }
 
@@ -36,7 +36,6 @@ class _SubjectDetailsState extends State<SubjectDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff242C3B),
-
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -130,7 +129,7 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                     //color: Colors.grey,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(12),
-                                        color: Colors.green[100]),
+                                        color: Colors.green.shade100),
                                     child: Center(
                                         child: Text(
                                       'Save',
@@ -169,17 +168,14 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                     //color: Colors.grey,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(12),
-                                        gradient: LinearGradient(colors: [
-                                          Colors.green.shade100,
-                                          Color(0x363E51)
-                                        ])),
+                                        color: Colors.green.shade100),
                                     child: Center(
                                         child: Text(
                                       'Edit',
                                       style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 20,
-                                          color: Colors.white),
+                                          color: Colors.black),
                                     )),
                                   ),
                                 )
@@ -192,22 +188,22 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                   ))
             ]),
           ),
-          Container(
-            width: 500,
-            //color: Colors.grey,
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 700,
-                  child: ListView.builder(
-                      itemCount: subject_list.length,
-                      itemBuilder: (BuildContext ctx, int index) {
-                        return ListTile(
-                          // tileColor: Colors.orange,
-                          title: Padding(
-                            padding: const EdgeInsets.only(left: 200),
-                            child: Container(
-                              width: 200,
+          Padding(
+            padding: const EdgeInsets.only(left: 200),
+            child: Container(
+              width: 500,
+              //color: Colors.grey,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 700,
+                    child: ListView.builder(
+                        itemCount: subject_list.length,
+                        itemBuilder: (BuildContext ctx, int index) {
+                          return ListTile(
+                            // tileColor: Colors.orange,
+                            title: Container(
+                              width: 100,
                               height: 100,
                               //color: Colors.white,
                               decoration: BoxDecoration(
@@ -218,8 +214,6 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(68)),
                               child: Column(
-                                //crossAxisAlignment:
-                                //CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
@@ -227,6 +221,8 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                         padding: const EdgeInsets.only(
                                             left: 50, top: 15),
                                         child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
                                           children: [
                                             Text(
                                               'Class name: ' +
@@ -236,6 +232,7 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                               style: GoogleFonts.poppins(
                                                   fontWeight: FontWeight.w700,
                                                   color: Colors.white),
+                                              textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'Subject: ' +
@@ -245,6 +242,7 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                               style: GoogleFonts.poppins(
                                                   fontWeight: FontWeight.w700,
                                                   color: Colors.white),
+                                              textAlign: TextAlign.start,
                                             ),
                                           ],
                                         ),
@@ -298,90 +296,15 @@ class _SubjectDetailsState extends State<SubjectDetails> {
                                 ],
                               ),
                             ),
-                          ),
-                        );
-                      }),
-                ),
-              ],
+                          );
+                        }),
+                  ),
+                ],
+              ),
             ),
           )
         ]),
       ),
-      //
-      //     ],
-      //   )),,
-      // // body: ListView(
-      //   children: [
-      //     Column(
-      //       children: [
-      //         SizedBox(
-      //           height: 40,
-      //         ),
-      //         Container(
-      //           width: 350,
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(20),
-      //             gradient: LinearGradient(
-      //               colors: [
-      //                 Color.fromARGB(255, 102, 100, 100),
-      //                 Color(0x363E51)
-      //               ],
-      //             ),
-      //           ),
-      //           child: TextField(
-      //             controller: classnameController,
-      //             decoration: InputDecoration(
-      //                 enabledBorder: InputBorder.none,
-      //                 contentPadding: EdgeInsets.all(12),
-      //                 hintText: 'Enter Class name',
-      //                 hintStyle: GoogleFonts.poppins(
-      //                     fontSize: 15,
-      //                     fontWeight: FontWeight.w400,
-      //                     color: Colors.white)),
-      //           ),
-      //         ),
-      //         SizedBox(
-      //           height: 20,
-      //         ),
-      //         Container(
-      //           width: 350,
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(20),
-      //             gradient: LinearGradient(
-      //               colors: [
-      //                 Color.fromARGB(255, 102, 100, 100),
-      //                 Color(0x363E51)
-      //               ],
-      //             ),
-      //           ),
-      //           child: TextField(
-      //             controller: subjectController,
-      //             decoration: InputDecoration(
-      //                 enabledBorder: InputBorder.none,
-      //                 contentPadding: EdgeInsets.all(12),
-      //                 hintText: 'Enter subject',
-      //                 hintStyle: GoogleFonts.poppins(
-      //                     fontSize: 15,
-      //                     fontWeight: FontWeight.w400,
-      //                     color: Colors.white)),
-      //           ),
-      //         ),
-      //         SizedBox(
-      //           height: 20,
-      //         ),
-
-      //         SizedBox(
-      //           height: 40,
-      //         ),
-      //         SizedBox(
-      //           height: 900,
-      //           child:
-
-      //         )
-      //       ],
-      //     )
-      //   ],
-      // )
     );
   }
 }

@@ -24,25 +24,25 @@ class _ClassRoomState extends State<ClassRoom> {
 
   final nocolscontroller = TextEditingController();
 
-  Future addtimetabledetails(String _roomnum, String _block, String _noofrows,
-      String _noofcols) async {
-    await FirebaseFirestore.instance.collection('Class Room').add({
-      'Room Number': _roomnum,
-      'Block': _block,
-      'No Of Rows': _noofrows,
-      'No Of Columns': _noofcols,
-    });
-  }
+  // Future addtimetabledetails(String _roomnum, String _block, String _noofrows,
+  //     String _noofcols) async {
+  //   await FirebaseFirestore.instance.collection('Class Room').add({
+  //     'Room Number': _roomnum,
+  //     'Block': _block,
+  //     'No Of Rows': _noofrows,
+  //     'No Of Columns': _noofcols,
+  //   });
+  // }
 
   @override
-  Future insert() async {
-    await addtimetabledetails(
-      roomnumcontroller.text.trim(),
-      blockcontroller.text.trim(),
-      norowscontroller.text.trim(),
-      nocolscontroller.text.trim(),
-    );
-  }
+  // Future insert() async {
+  //   await addtimetabledetails(
+  //     roomnumcontroller.text.trim(),
+  //     blockcontroller.text.trim(),
+  //     norowscontroller.text.trim(),
+  //     nocolscontroller.text.trim(),
+  //   );
+  // }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,7 +163,7 @@ class _ClassRoomState extends State<ClassRoom> {
                                         norowscontroller.text.trim();
                                     String no_cols =
                                         nocolscontroller.text.trim();
-                                    insert();
+                                    //insert();
                                     setState(() {
                                       if (roomnum.isNotEmpty &&
                                           _block.isNotEmpty &&
