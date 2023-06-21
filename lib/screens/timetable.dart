@@ -23,25 +23,25 @@ class _TimeTableState extends State<TimeTable> {
 
   final classnamecontroller = TextEditingController();
 
-  // Future addtimetabledetails(String _classname, String _session,
-  //     String _subject, String _examdate) async {
-  //   await FirebaseFirestore.instance.collection('timetable').add({
-  //     'Class-Name': _classname,
-  //     'Session': _session,
-  //     'Subject': _subject,
-  //     'Exam-Date': _examdate,
-  //   });
-  // }
+  Future addtimetabledetails(String _classname, String _session,
+      String _subject, String _examdate) async {
+    await FirebaseFirestore.instance.collection('timetabledetails').add({
+      'classame': _classname,
+      'session': _session,
+      'subject': _subject,
+      'examdate': _examdate,
+    });
+  }
 
   @override
-  // Future insert() async {
-  //   await addtimetabledetails(
-  //     classnamecontroller.text.trim(),
-  //     sessioncontroller.text.trim(),
-  //     subjectcontroller.text.trim(),
-  //     examdatecontroller.text.trim(),
-  //   );
-  // }
+  Future insert() async {
+    await addtimetabledetails(
+      classnamecontroller.text.trim(),
+      sessioncontroller.text.trim(),
+      subjectcontroller.text.trim(),
+      examdatecontroller.text.trim(),
+    );
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +65,7 @@ class _TimeTableState extends State<TimeTable> {
                       height: 150,
                     ),
                     Text(
-                      'CLASS DETAILS',
+                      'TIMETABLE DETAILS',
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w700,
                           fontSize: 32,
@@ -162,7 +162,7 @@ class _TimeTableState extends State<TimeTable> {
                                       examdatecontroller.text.trim();
                                   String sub = subjectcontroller.text.trim();
                                   String sess = sessioncontroller.text.trim();
-                                  //insert();
+                                  insert();
                                   setState(() {
                                     if (clname.isNotEmpty &&
                                         exdate.isNotEmpty &&

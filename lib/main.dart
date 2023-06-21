@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:submini/functions/db_functions.dart';
+import 'package:submini/list/list_classroom.dart';
 import 'package:submini/screens/admin_login.dart';
-import 'package:submini/screens/class_details.dart';
 import 'package:submini/screens/classroom_details.dart';
 import 'package:submini/screens/main_page.dart';
-import 'package:submini/screens/screen_output.dart';
+import 'package:submini/screens/screen_about.dart';
 
-import 'package:submini/screens/subject_details.dart';
-import 'package:submini/screens/timetable.dart';
-import 'package:submini/widget/list_view.dart';
+import 'package:submini/screens/screen_out.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 

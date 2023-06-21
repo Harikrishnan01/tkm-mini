@@ -21,7 +21,7 @@ class _SubjectDetailsState extends State<SubjectDetails> {
   List<subjectList> subject_list = List.empty(growable: true);
 
   Future addsubjectdetails(String class_name, String subject) async {
-    await FirebaseFirestore.instance.collection('users').add({
+    await FirebaseFirestore.instance.collection('subjectdetails').add({
       'classname': class_name,
       'subject': subject,
     });
@@ -35,7 +35,7 @@ class _SubjectDetailsState extends State<SubjectDetails> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff242C3B),
+      //backgroundColor: Color(0xff242C3B),
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
